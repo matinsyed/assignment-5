@@ -55,10 +55,33 @@
                         </div>
                     </div>
                 </div>
-                <hr>
+                <hr class="flex-grow border-dashed text-zinc-200" >
                 <!-- Card Container Section -->
-                <div class="card-container">
-
+                <div class="card-container p-4">
+                    <div class="card card-border custom-bg w-56">
+                        <div class="p-3">
+                            <div class="rounded-md bg-white p-1 max-w-fit">
+                                <h6 class="text-xs">ShopEase</h6>
+                            </div>
+                            <h3>
+                                Fix Mobile Button Issue 
+                            </h3>
+                            <div class="bg-white flex-wrap">
+                                <p class="text-wrap">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly</p>
+                            </div>
+                            <div class="flex justify-center items-center">
+                                <div>
+                                    <p>Deadline</p>
+                                    21 March 2025
+                                </div>
+                                <div class="card-actions justify-end">
+                                    <button class="btn btn-primary">Completed</button>
+                                  </div>
+                            </div>
+                            
+                          
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- Side bar Section -->
@@ -68,5 +91,20 @@
         </main>
         
     </section>
+    <script>
+        const timestamp = Date.now();
+
+// Convert timestamp to a readable date and time format
+const currentDate = new Date(timestamp);
+
+console.log(currentDate)
+// Formatting date 
+const formattedDate = currentDate.toLocaleString();
+
+// Printing Date and Time
+// in console
+console.log(`Current Date and Time: ${formattedDate}`);
+
+    </script>
 </body>
 </html>
