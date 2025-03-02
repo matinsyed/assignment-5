@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body id="body-color" class="custom-bg poppins-font min-h-screen">
+<body id="body-color" class="poppins-font min-h-screen bg-custom">
     <section class="w-11/12 mx-auto">
         <header class="bg-white rounded-lg">
             <nav class="flex justify-between items-center p-4">
@@ -19,7 +19,7 @@
                     <h1>Dev<span class="font-bold">Board</span> </h1>
                 </div>
                 <div class="flex gap-3">
-                    <div class="flex  items-center custom-bg p-2 gap-3 rounded-2xl">
+                    <div class="flex  items-center bg-custom p-2 gap-3 rounded-2xl">
                         <img class="size-5" src="./assets/checkbox.png" alt="">
                         <h3 id="dev-count" class="size-5 font-bold">23</h3>
                     </div>
@@ -33,7 +33,7 @@
             <div class="container w-9/12 bg-white rounded-xl mt-2">
                 <!-- Task container Section -->
                 <div class="flex justify-between p-4">
-                    <div class="custom-bg flex justify-around items-center p-5 gap-2 rounded-xl">
+                    <div class="bg-custom flex justify-around items-center p-5 gap-2 rounded-xl">
                         <div class="bg-white p-3 rounded-full items-center">
                             <img class="size-4" src="./assets/checkbox.png" alt="">
                         </div>
@@ -47,7 +47,7 @@
                         <img class="size-10" src="./assets/board.png" alt="">
                         <p class="text-primary-content">Discover Something New Today</p>
                     </div>
-                    <div class="custom-bg flex justify-around items-center p-5 gap-2 rounded-xl">
+                    <div class="bg-custom flex justify-around items-center p-5 gap-2 rounded-xl">
                         <div class="bg-white p-4 rounded-full">
                             <img class="size-5" src="./assets/calender.png" alt="">
 
@@ -61,7 +61,7 @@
                 <hr class="flex-grow border-dashed text-zinc-200">
                 <!-- Card Container Section -->
                 <div class="card-container p-4 grid grid-cols-3 gap-4">
-                    <div class="card card-border custom-bg w-72">
+                    <div class="card card-border bg-custom w-72">
                         <div class="p-3">
                             <div class="rounded-md bg-white p-1 max-w-fit">
                                 <h6 class="text-xs text-[#00303C]">ShopEase</h6>
@@ -89,7 +89,7 @@
                         </div>
                     </div>
                     <!-- Card -2 -->
-                    <div class="card card-border custom-bg w-72">
+                    <div class="card card-border bg-custom w-72">
                         <div class="p-3">
                             <div class="rounded-md bg-white p-1 max-w-fit">
                                 <h6 class="text-xs text-[#00303C]">CloudSync</h6>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <!-- Card-3 -->
-                    <div class="card card-border custom-bg w-72">
+                    <div class="card card-border bg-custom w-72">
                         <div class="p-3">
                             <div class="rounded-md bg-white p-1 max-w-fit">
                                 <h6 class="text-xs text-[#00303C]">SwiftPay</h6>
@@ -145,7 +145,7 @@
                         </div>
                     </div>
                     <!-- Card-4 -->
-                    <div class="card card-border custom-bg w-72">
+                    <div class="card card-border bg-custom w-72">
                         <div class="p-3">
                             <div class="rounded-md bg-white p-1 max-w-fit">
                                 <h6 class="text-xs text-[#00303C]">Meta</h6>
@@ -175,7 +175,7 @@
                         </div>
                     </div>
                     <!-- Card-5 -->
-                    <div class="card card-border custom-bg w-72">
+                    <div class="card card-border bg-custom w-72">
                         <div class="p-3">
                             <div class="rounded-md bg-white p-1 max-w-fit">
                                 <h6 class="text-xs text-[#00303C]">Google LLC</h6>
@@ -205,7 +205,7 @@
                         </div>
                     </div>
                     <!-- Card-6 -->
-                    <div class="card card-border custom-bg w-72">
+                    <div class="card card-border bg-custom w-72">
                         <div class="p-3">
                             <div class="rounded-md bg-white p-1 max-w-fit">
                                 <h6 class="text-xs text-[#00303C]">Glassdoar</h6>
@@ -247,13 +247,13 @@
                 </div>
                 <hr class="flex-grow border-dashed text-zinc-200">
                 <div id="history-card" class="mt-4 space-y-4">
-                    <div class="custom-bg rounded-lg p-3">
+                    <div class="bg-custom rounded-lg p-3">
                         <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
                     </div>
-                    <div class="custom-bg rounded-lg p-3">
+                    <div class="bg-custom rounded-lg p-3">
                         <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
                     </div>
-                    <div class="custom-bg rounded-lg p-3">
+                    <div class="bg-custom rounded-lg p-3">
                         <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
                     </div>
                 </div>
@@ -271,7 +271,7 @@
         document.getElementById("theme-btn").addEventListener("click", function () {
             const bodyElementID = document.getElementById("body-color").classList;
             // console.log(bodyBgColor);
-            const defaultBackGround = 'custom-bg';
+            const defaultBackGround = 'bg-custom';
             const newBackGround = '';
             changeBackGroundColor(bodyElementID, defaultBackGround, newBackGround) //function changeBackGroundColor(elementID, backGround)
         })
