@@ -46,13 +46,14 @@
         function showHistory(elementID){
             const taskTitle =  getTaskTitle(elementID);            
             const historyCard = document.getElementById("history-card");
+            const publishedTime = getPublishTime();
             const div = document.createElement("div");
             div.classList.add("bg-custom");
             div.classList.add("rounded-lg");
             div.classList.add("p-3");
 
             div.innerHTML =  `
-                <p>You have Complete The Task ${taskTitle} at 12:48:15 PM</p>
+                <p>You have Complete The Task ${taskTitle} at ${publishedTime}</p>
             `           
             historyCard.append(div)
         }
@@ -64,4 +65,9 @@
             div.classList.add("mt-4");
             div.classList.add("space-y-4");
             historyContainer.append(div)
+        }
+
+        function getPublishTime() {
+            const d = new Date();
+            return d.toLocaleTimeString();
         }
