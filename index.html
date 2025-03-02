@@ -53,8 +53,8 @@
 
                         </div>
                         <div>
-                            <h6>Wed , </h6>
-                            <h2 class="font-bold text-[22px]">Jul 28 2025 </h2>
+                            <h6 id="day-name">Wed , </h6>
+                            <h2 id="publish-date" class="font-bold text-[22px]">Jul 28 2025 </h2>
                         </div>
                     </div>
                 </div>
@@ -264,10 +264,8 @@
         // Theme Change
         document.getElementById("theme-btn").addEventListener("click", function () {
             const bodyElementID = document.getElementById("body-color").classList;
-            // console.log(bodyBgColor);
-            const defaultBackGround = 'bg-custom';
-            const newBackGround = '';
-            changeBackGroundColor(bodyElementID, defaultBackGround, newBackGround) //function changeBackGroundColor(elementID, backGround)
+                        
+            changeBackGroundColor(bodyElementID) 
         })
 
 
@@ -340,23 +338,11 @@
             getHistoryContainer(); //Append History Card Container div
         })       
 
-
-        const timestamp = Date.now();
-
-        // Convert timestamp to a readable date and time format
-        const currentDate = new Date(timestamp);
-
-        console.log(currentDate)
-        // Formatting date 
-        const formattedDate = currentDate.toLocaleString();
-
-        // Printing Date and Time
-        // in console
-        console.log(`Current Date and Time: ${formattedDate}`);
-
     </script>
 
-    <script src="./js/devboard.js"></script>
+    <script src="./js/devboard.js">
+        
+    </script>
 
 </body>
 

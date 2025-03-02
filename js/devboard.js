@@ -1,26 +1,15 @@
-// const id = document.getElementById("body-color").classList;
-//         console.log(id);
-//         let bg = '';
-        let newBackGround = '';
-        function changeBackGroundColor(elementID, defaultBackGround, newBackGround){
+
+        function changeBackGroundColor(elementID){
             
-            elementID.remove(defaultBackGround);
-            // elementID.remove(newBackGround);
-            if(newBackGround !== '')
-            {
-                elementID.remove(newBackGround);
-            }
-            // console.log(newBackGround);
-            // console.log(elementID);
+            elementID.remove(elementID[2]);
             
             let colorList = ['purple','blue','green', 'yellow', 'lime', 'red', 'black', 'cyan', 'indigo','pink','gray'];
             let i = Math.floor(Math.random() * colorList.length);
             let r = colorList[i];
-            // console.log(i, '>>>>>>',r);
-            newBackGround = 'bg-['+r+']';
+
+            const newBackGround = 'bg-['+r+']';
             
             elementID.add(newBackGround);
-            // newBackGround = '';
         }
 
         function getTaskCount(taskCount, totalTaskCount){
@@ -71,3 +60,13 @@
             const d = new Date();
             return d.toLocaleTimeString();
         }
+
+        function getPublishedDate(){
+            const d = new Date();
+            let text = d.toDateString();
+            text = text.split(" ");
+            
+            document.getElementById("day-name").innerHTML = text[0] + " ,";
+            document.getElementById("publish-date").innerHTML = text[1] + " " + text[2] + " " + text[3  ];
+        }
+        getPublishedDate();
