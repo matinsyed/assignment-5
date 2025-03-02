@@ -28,22 +28,36 @@
                     Question-1: What are the different ways to select an element in the DOM?
                 </h2>
                 <hr class="flex-grow border-dashed text-zinc-200">
-                <p class="font-extralight my-2">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et accusantium eos quia, quaerat odit
-                    numquam placeat, praesentium commodi, tenetur aperiam ex delectus. Qui minima officia asperiores, id
-                    blanditiis facere est!
-                </p>
+                <div class="font-extralight my-2">
+                    <ul class="space-y-1 text-gray-400 list-disc list-inside">
+                        The different ways to select an element in the DOM are
+                        <li>getElementByTagName()</li>
+                        <li>getElementById()</li>
+                        <li>getElementsByClassName()</li>
+                        <li>querySelectorAll()</li>
+                        <li>querySelector()</li>
+                    </ul>
+                </div>
             </div>
             <div class="bg-white rounded-lg p-4">
                 <h2 class="font-bold my-2">
                     Question-2: What is the difference between innerHTML, innerText, and textContent ?
                 </h2>
                 <hr class="flex-grow border-dashed text-zinc-200">
-                <p class="font-extralight my-2">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et accusantium eos quia, quaerat odit
-                    numquam placeat, praesentium commodi, tenetur aperiam ex delectus. Qui minima officia asperiores, id
-                    blanditiis facere est!
-                </p>
+                <div class="font-extralight my-2">
+                    <p>
+                        <span class="font-bold">innerHTML :</span>
+                        innerHTML returns both HTML tags and plain text.
+                    </p> 
+                    <p>
+                        <span class="font-bold">innerText :</span>
+                        innerTex shows only plain text, but not HTML tags. It can't show those content which are hidden by CSS code.
+                    </p> 
+                    <p>
+                        <span class="font-bold">textContent :</span>
+                        The textContent property also ignores all HTML tags and returns only the text. Whiles innerText reads text as it is rendered on screen, textContent reads text as it is in the markup. It also returns all text, whether it's rendered on screen or not.
+                    </p> 
+                </div>
             </div>
             <div class="bg-white rounded-lg p-4">
                 <h2 class="font-bold my-2">
@@ -51,9 +65,8 @@
                 </h2>
                 <hr class="flex-grow border-dashed text-zinc-200">
                 <p class="font-extralight my-2">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et accusantium eos quia, quaerat odit
-                    numquam placeat, praesentium commodi, tenetur aperiam ex delectus. Qui minima officia asperiores, id
-                    blanditiis facere est!
+                    event handler চাইল্ড এ add না করে Parent এ add করতে হবে।
+                    event.target.ParentNode.removeChild()
                 </p>
             </div>
             <div class="bg-white rounded-lg p-4">
@@ -62,10 +75,9 @@
                 </h2>
                 <hr class="flex-grow border-dashed text-zinc-200">
                 <p class="font-extralight my-2">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et accusantium eos quia, quaerat odit
-                    numquam placeat, praesentium commodi, tenetur aperiam ex delectus. Qui minima officia asperiores, id
-                    blanditiis facere est!
+                    Event bubbling in the DOM is a way to handle events in a browser, where an event triggers on an element and then "bubbles up" to its parent elements. This process continues until it reaches the document object. 
                 </p>
+                <img src="./assets/propagation-diagram.png" alt="">
             </div>
             <div class="bg-white rounded-lg p-4">
                 <h2 class="font-bold my-2">
@@ -73,9 +85,13 @@
                 </h2>
                 <hr class="flex-grow border-dashed text-zinc-200">
                 <p class="font-extralight my-2">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et accusantium eos quia, quaerat odit
-                    numquam placeat, praesentium commodi, tenetur aperiam ex delectus. Qui minima officia asperiores, id
-                    blanditiis facere est!
+                    <span class="font-bold">create: </span> createElement(). Example const div = document.createElement("div");
+                </p>
+                <p>
+                    <span class="font-bold">add: </span>    div.classList.add("bg-custom");
+                </p>
+                <p>
+                    <span class="font-bold">remove: </span> elementID.remove(elementID[2]);
                 </p>
             </div>
         </main>
