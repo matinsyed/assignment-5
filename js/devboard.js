@@ -38,4 +38,30 @@
             }            
         }
 
+        function getTaskTitle(taskTitleID){
+            const taskTitle = document.getElementById(taskTitleID).innerText;
+            return taskTitle;
+        }
 
+        function showHistory(elementID){
+            const taskTitle =  getTaskTitle(elementID);            
+            const historyCard = document.getElementById("history-card");
+            const div = document.createElement("div");
+            div.classList.add("bg-custom");
+            div.classList.add("rounded-lg");
+            div.classList.add("p-3");
+
+            div.innerHTML =  `
+                <p>You have Complete The Task ${taskTitle} at 12:48:15 PM</p>
+            `           
+            historyCard.append(div)
+        }
+
+        function getHistoryContainer(){
+            const historyContainer = document.getElementById("side-bar");
+            const div = document.createElement("div");
+            div.id = "history-card";
+            div.classList.add("mt-4");
+            div.classList.add("space-y-4");
+            historyContainer.append(div)
+        }

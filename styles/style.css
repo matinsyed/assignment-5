@@ -10,3 +10,7 @@
   color: white;
   background-color: #3752FD;
 }
+.btn-disabled{
+  color: rgb(136, 116, 116);
+  background-color: #c9ccc879;
+}

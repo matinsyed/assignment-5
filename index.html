@@ -67,7 +67,7 @@
                                 <h6 class="text-xs text-[#00303C]">ShopEase</h6>
                             </div>
                             <div class="my-4">
-                                <h3 class="font-medium text-2xl text-[#00303C]">
+                                <h3 id="btn-complete-1-title" class="font-medium text-2xl text-[#00303C]">
                                     Fix Mobile Button Issue
                                 </h3>
                             </div>
@@ -95,7 +95,7 @@
                                 <h6 class="text-xs text-[#00303C]">CloudSync</h6>
                             </div>
                             <div class="my-4">
-                                <h3 class="font-medium text-2xl text-[#00303C]">
+                                <h3 id="btn-complete-2-title" class="font-medium text-2xl text-[#00303C]">
                                     Add Dark Mode
                                 </h3>
                             </div>
@@ -122,7 +122,7 @@
                                 <h6 class="text-xs text-[#00303C]">SwiftPay</h6>
                             </div>
                             <div class="my-4">
-                                <h3 class="font-medium text-2xl text-[#00303C]">
+                                <h3 id="btn-complete-3-title" class="font-medium text-2xl text-[#00303C]">
                                     Optimize Home page 
                                 </h3>
                             </div>
@@ -139,7 +139,7 @@
                                     21 March 2025
                                 </div>
                                 <div class="card-actions justify-end">
-                                    <button id="btn-complete-2" class="btn btn-color btn-complete">Completed</button>
+                                    <button id="btn-complete-3" class="btn btn-color btn-complete">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -151,7 +151,7 @@
                                 <h6 class="text-xs text-[#00303C]">Meta</h6>
                             </div>
                             <div class="my-4">
-                                <h3 class="font-medium text-2xl text-[#00303C]">
+                                <h3 id="btn-complete-4-title" class="font-medium text-2xl text-[#00303C]">
                                     Add new emoji 🤲
                                 </h3>
                             </div>
@@ -181,7 +181,7 @@
                                 <h6 class="text-xs text-[#00303C]">Google LLC</h6>
                             </div>
                             <div class="my-4">
-                                <h3 class="font-medium text-2xl text-[#00303C]">
+                                <h3 id="btn-complete-5-title" class="font-medium text-2xl text-[#00303C]">
                                     Integrate OpenAI API
                                 </h3>
                             </div>
@@ -211,7 +211,7 @@
                                 <h6 class="text-xs text-[#00303C]">Glassdoar</h6>
                             </div>
                             <div class="my-4">
-                                <h3 class="font-medium text-2xl text-[#00303C]">
+                                <h3 id="btn-complete-6-title" class="font-medium text-2xl text-[#00303C]">
                                     Improve Job searching
                                 </h3>
                             </div>
@@ -237,27 +237,20 @@
                 </div>
             </div>
             <!-- Side bar Section -->
-            <div class="side-bar container w-3/12 bg-white rounded-xl mt-2 p-4">
+            <div id="side-bar" class="container w-3/12 bg-white rounded-xl mt-2 p-4">
                 <div class="flex justify-center gap-5 mb-4">
                     <img src="./assets/activity.png" alt="">
                     <h2>Activity Log</h2>
                 </div>
                 <div class="card-actions justify-center mb-4">
-                    <button class="btn btn-color btn-complete">Clear History</button>
+                    <button id="clear-history" class="btn btn-color btn-complete">Clear History</button>
                 </div>
                 <hr class="flex-grow border-dashed text-zinc-200">
                 <div id="history-card" class="mt-4 space-y-4">
-                    <div class="bg-custom rounded-lg p-3">
-                        <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-                    </div>
-                    <div class="bg-custom rounded-lg p-3">
-                        <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-                    </div>
-                    <div class="bg-custom rounded-lg p-3">
-                        <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
-                    </div>
+
                 </div>
             </div>
+
         </main>
 
     </section>
@@ -278,20 +271,75 @@
         })
 
 
-        document.getElementById("btn-complete-1").addEventListener("click", function(event){
+        document.getElementById("btn-complete-1").addEventListener("click", function (event) {
             const taskCount = parseInt(document.getElementById('task-count').innerText);
-            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText); 
-            
-            getTaskCount(taskCount, totalTaskCount);  
+            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
 
-            event.target.set;
-            
+            event.target.classList = 'btn btn-disabled';
+
+            getTaskCount(taskCount, totalTaskCount);
+            showHistory("btn-complete-1-title");
+        })
+
+        document.getElementById("btn-complete-2").addEventListener("click", function (event) {
+            const taskCount = parseInt(document.getElementById('task-count').innerText);
+            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
+
+            event.target.classList = 'btn btn-disabled';
+
+            getTaskCount(taskCount, totalTaskCount);
+            showHistory("btn-complete-2-title");
+        })
+
+        document.getElementById("btn-complete-3").addEventListener("click", function (event) {
+            const taskCount = parseInt(document.getElementById('task-count').innerText);
+            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
+
+            event.target.classList = 'btn btn-disabled';
+
+            getTaskCount(taskCount, totalTaskCount);
+            showHistory("btn-complete-3-title");
+        })
+
+        document.getElementById("btn-complete-4").addEventListener("click", function (event) {
+            const taskCount = parseInt(document.getElementById('task-count').innerText);
+            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
+
+            event.target.classList = 'btn btn-disabled';
+
+            getTaskCount(taskCount, totalTaskCount);
+            showHistory("btn-complete-4-title");
+        })
+
+        document.getElementById("btn-complete-5").addEventListener("click", function (event) {
+            const taskCount = parseInt(document.getElementById('task-count').innerText);
+            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
+           
+            event.target.classList = 'btn btn-disabled';
+
+            getTaskCount(taskCount, totalTaskCount);
+            showHistory("btn-complete-5-title");
+        })
+
+        document.getElementById("btn-complete-6").addEventListener("click", function (event) {
+            const taskCount = parseInt(document.getElementById('task-count').innerText);
+            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
+
+            event.target.classList = 'btn btn-disabled';
+
+            getTaskCount(taskCount, totalTaskCount);
+            showHistory("btn-complete-6-title");
         })
 
 
-        function showHistory(tastTtile){
-            
-        }
+        // function clearHistory(){
+        document.getElementById("clear-history").addEventListener("click", function (event) {
+            const historyCard = document.getElementById("history-card");
+            historyCard.remove();
+
+            getHistoryContainer(); //Append History Card Container div
+        })       
+
 
         const timestamp = Date.now();
 
