@@ -23,4 +23,19 @@
             // newBackGround = '';
         }
 
+        function getTaskCount(taskCount, totalTaskCount){
+            totalTaskCount = totalTaskCount + 1;
+            taskCount = taskCount - 1;
+            const button = document.querySelector("button");
+            button.setAttribute("disabled", "disabled");
+            if(taskCount>=0){   
+                document.getElementById('task-count').innerText = taskCount; 
+                document.getElementById('dev-count').innerText = totalTaskCount;
+                alert("Board updated successfully.");
+                if(taskCount === 0){
+                    alert("Congratulations! You have completed all tasks.");
+                }
+            }            
+        }
+
 

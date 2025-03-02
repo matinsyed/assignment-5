@@ -39,7 +39,7 @@
                         </div>
                         <div>
                             <h6>Task Assigned </h6>
-                            <h2 class="font-bold text-2xl">06</h2>
+                            <h2 id="task-count" class="font-bold text-2xl">06</h2>
                         </div>
                     </div>
                     <div id="discover-new"
@@ -83,7 +83,7 @@
                                     21 March 2025
                                 </div>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-color">Completed</button>
+                                    <button id="btn-complete-1" class="btn btn-color btn-complete">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -110,7 +110,7 @@
                                     21 March 2025
                                 </div>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-color">Completed</button>
+                                    <button id="btn-complete-2" class="btn btn-color btn-complete">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -139,7 +139,7 @@
                                     21 March 2025
                                 </div>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-color">Completed</button>
+                                    <button id="btn-complete-2" class="btn btn-color btn-complete">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
                                     21 March 2025
                                 </div>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-color">Completed</button>
+                                    <button id="btn-complete-4" class="btn btn-color btn-complete">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +199,7 @@
                                     21 March 2025
                                 </div>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-color">Completed</button>
+                                    <button id="btn-complete-5" class="btn btn-color btn-complete">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -229,7 +229,7 @@
                                     21 March 2025
                                 </div>
                                 <div class="card-actions justify-end">
-                                    <button class="btn btn-color">Completed</button>
+                                    <button id="btn-complete-6" class="btn btn-color btn-complete">Completed</button>
                                 </div>
                             </div>
                         </div>
@@ -243,7 +243,7 @@
                     <h2>Activity Log</h2>
                 </div>
                 <div class="card-actions justify-center mb-4">
-                    <button class="btn btn-color">Clear History</button>
+                    <button class="btn btn-color btn-complete">Clear History</button>
                 </div>
                 <hr class="flex-grow border-dashed text-zinc-200">
                 <div id="history-card" class="mt-4 space-y-4">
@@ -263,11 +263,12 @@
     </section>
 
     <script>
+        // Jumps to blog page
         document.getElementById("discover-new").addEventListener("click", function () {
             window.location.href = "./blog.html";
         })
 
-
+        // Theme Change
         document.getElementById("theme-btn").addEventListener("click", function () {
             const bodyElementID = document.getElementById("body-color").classList;
             // console.log(bodyBgColor);
@@ -277,6 +278,20 @@
         })
 
 
+        document.getElementById("btn-complete-1").addEventListener("click", function(event){
+            const taskCount = parseInt(document.getElementById('task-count').innerText);
+            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText); 
+            
+            getTaskCount(taskCount, totalTaskCount);  
+
+            event.target.set;
+            
+        })
+
+
+        function showHistory(tastTtile){
+            
+        }
 
         const timestamp = Date.now();
 
