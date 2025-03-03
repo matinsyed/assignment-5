@@ -268,67 +268,21 @@
             changeBackGroundColor(bodyElementID) 
         })
 
+        //Task Button event
+        for(let i=1; i<=6; i++){
+            let btnElementID = "btn-complete-" + i;
+            let taskElementTitle = btnElementID + "-title";
 
-        document.getElementById("btn-complete-1").addEventListener("click", function (event) {
-            const taskCount = parseInt(document.getElementById('task-count').innerText);
-            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
+            document.getElementById(btnElementID).addEventListener("click", function (event) {
+                const taskCount = parseInt(document.getElementById('task-count').innerText);
+                const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
 
-            event.target.classList = 'btn btn-disabled';
+                event.target.classList = 'btn btn-disabled';
 
-            getTaskCount(taskCount, totalTaskCount);
-            showHistory("btn-complete-1-title");
-        })
-
-        document.getElementById("btn-complete-2").addEventListener("click", function (event) {
-            const taskCount = parseInt(document.getElementById('task-count').innerText);
-            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
-
-            event.target.classList = 'btn btn-disabled';
-
-            getTaskCount(taskCount, totalTaskCount);
-            showHistory("btn-complete-2-title");
-        })
-
-        document.getElementById("btn-complete-3").addEventListener("click", function (event) {
-            const taskCount = parseInt(document.getElementById('task-count').innerText);
-            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
-
-            event.target.classList = 'btn btn-disabled';
-
-            getTaskCount(taskCount, totalTaskCount);
-            showHistory("btn-complete-3-title");
-        })
-
-        document.getElementById("btn-complete-4").addEventListener("click", function (event) {
-            const taskCount = parseInt(document.getElementById('task-count').innerText);
-            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
-
-            event.target.classList = 'btn btn-disabled';
-
-            getTaskCount(taskCount, totalTaskCount);
-            showHistory("btn-complete-4-title");
-        })
-
-        document.getElementById("btn-complete-5").addEventListener("click", function (event) {
-            const taskCount = parseInt(document.getElementById('task-count').innerText);
-            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
-           
-            event.target.classList = 'btn btn-disabled';
-
-            getTaskCount(taskCount, totalTaskCount);
-            showHistory("btn-complete-5-title");
-        })
-
-        document.getElementById("btn-complete-6").addEventListener("click", function (event) {
-            const taskCount = parseInt(document.getElementById('task-count').innerText);
-            const totalTaskCount = parseInt(document.getElementById('dev-count').innerText);
-
-            event.target.classList = 'btn btn-disabled';
-
-            getTaskCount(taskCount, totalTaskCount);
-            showHistory("btn-complete-6-title");
-        })
-
+                getTaskCount(taskCount, totalTaskCount);
+                showHistory(taskElementTitle);
+            })
+        }
 
         // function clearHistory(){
         document.getElementById("clear-history").addEventListener("click", function (event) {
@@ -340,9 +294,7 @@
 
     </script>
 
-    <script src="./js/devboard.js">
-        
-    </script>
+    <script src="./js/devboard.js">  </script>
 
 </body>
 
